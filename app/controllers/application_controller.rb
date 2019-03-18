@@ -6,6 +6,10 @@ class ApplicationController < Sinatra::Base
 
   # code actions here!
 
+  get '/recipes/new' do
+  erb :new
+  end
+
   get '/recipes' do
     @recipes = Recipe.all
     erb :index
@@ -16,9 +20,7 @@ class ApplicationController < Sinatra::Base
   erb :show
   end
 
-  get '/recipes/new' do
-  erb :new
-  end
+
 
   post '/recipes' do
     @recipe = Recipe.create(params)
