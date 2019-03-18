@@ -16,4 +16,8 @@ class ApplicationController < Sinatra::Base
   erb :show
   end
 
+  get '/recipes/new' do #loads new form
+  erb :new
+end
+
 end
